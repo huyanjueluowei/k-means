@@ -23,7 +23,7 @@ def load_data(filePath):
     return np.mat(data), width, height
 # 加载图像，得到规范化的结果imgData，以及图像尺寸
 img, width, height = load_data('cat.jpg')
-# 用K-Means对图像进行16聚类
+# 用K-Means对图像进行k聚类,自己设定
 kmeans =KMeans(n_clusters=8)
 label = kmeans.fit_predict(img)
 # 将图像聚类结果，转化成图像尺寸的矩阵
